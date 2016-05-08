@@ -21,22 +21,26 @@ gulp.task('styles', ['clean-styles'], function() {
    log('Compiling Less --> CSS');
 
    return gulp
-        .src(config.less) //todo add to config
+        .src(config.less)
         .pipe($.less())
         .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
         .pipe(gulp.dest(config.temp));
 });
 
-gulp.task('clean-styles', function(done) {
+gulp.task('clean-styles', function() {
     var files = config.temp + '**/**.css';
-    clean(files, done);
+    clean(files);
+});
+
+gulp.task('less-watcher', function() {
+    gulp.watch([config.less], ['styles']);
 });
 
 ////////////functions
 
-function clean(path, done) {
+function clean(path) {
     log('Cleaning: ' + $.util.colors.blue(path));
-    del(path, done);
+    del(path).then(log('delete done'));
 }
 
 function log(msg) {
