@@ -1,4 +1,5 @@
-# pluralsight-gulp
+# Learning Gulp
 
-This is a course by John Papa on gulp and the advantages of using JavaScript build automation
+This course taught me how to use Gulp and the importance of build automation for JavaScript projects
+Taught by John Papa on Pluralsight
 
