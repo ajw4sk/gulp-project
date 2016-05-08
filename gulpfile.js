@@ -38,6 +38,17 @@ gulp.task('less-watcher', function() {
     gulp.watch([config.less], ['styles']);
 });
 
+gulp.task('wiredep', function() {
+    var otions = config.getWiredepDefaultOptions(); //todo
+    var wiredep = require('wiredep').stream;
+
+    return gulp
+        .src(config.index) ///todo index.html
+        .pipe(wiredep(options))
+        .pipe($.inject(gulp.src(config.js)))
+        .pipe(gulp.dest(config.client)); //todo config
+});
+
 ////////////functions
 
 function clean(path) {
