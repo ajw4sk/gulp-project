@@ -1,9 +1,9 @@
 {
-  "name": "Pluralsight-Gulp",
+  "name": "Learning-Gulp",
   "version": "0.1.0",
-  "description": "Starter Code for Pluralsight Course JavaScript Build Automation with Gulp.js",
+  "description": "Learning Gulp from a Pluralsight Course",
   "authors": [
-    "John Papa"
+    "Andrew Wippl (starter code by John Papa)"
   ],
   "license": "MIT",
   "homepage": "https://github.com/johnpapa/pluralsight-gulp",
