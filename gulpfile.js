@@ -39,7 +39,7 @@ gulp.task('less-watcher', function() {
 });
 
 gulp.task('wiredep', function() {
-    var otions = config.getWiredepDefaultOptions(); //todo
+    var options = config.getWiredepDefaultOptions(); //todo
     var wiredep = require('wiredep').stream;
 
     return gulp

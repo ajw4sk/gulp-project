@@ -1,15 +1,20 @@
 module.exports = function() {
     var client = './src/client/';
     var clientApp = client + 'app/';
+    var temp = './.tmp/';
 
     var config = {
-        temp: './.tmp/',
-        // file paths
+        temp: temp,
+
+        /**
+         * Files paths
+         */
         alljs: [
             './src/**/*.js',
             './*.js'
         ],
         client: client,
+        css: temp + 'styles.css',
         index: client + 'index.html',
         js: [
             clientApp + '**/*.module.js',
@@ -19,13 +24,15 @@ module.exports = function() {
 
         less: client + 'styles/styles.less',
 
-        //bower and npm locations
+        /**
+         * Bower and NPM locations
+         */
         bower: {
             json: require('./bower.json'),
             directory: './bower_components/',
             ignorePath: '../..'
-
         }
+
     };
 
     config.getWiredepDefaultOptions = function() {
